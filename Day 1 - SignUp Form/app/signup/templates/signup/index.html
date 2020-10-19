@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="body-wrapper">
+        <div class="logo">
+            <img src="../../images/Logo.svg" alt="Logo Image FormSign">
+        </div>
+    </div>
+    <div class="left">
+        <div class="header">
+            <h1 class="hero-header">
+                The #1 Signing Form Out There for Web, Mobile and other devices.
+            </h1>
+        </div>
+        <div class="illustration">
+            <img src="../../signup//images/Illustration.svg" alt="Sign-up Hero Illustration">
+        </div>
+    </div>
+    <div class="right">
+        <div class="form-wrapper">
+            <div class="buttons">
+                <button class="btn btn-sign-up active">Sign Up</button>
+                <button class="btn btn-sign-in">Sign In</button>
+            </div>
+            <div class="input-wrapper">
+                <form action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-names">
+                        
+                        <div class="name-left">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" id="first-name">
+                        </div>
+                        
+                        <div class="name-right">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" id="last-name">
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="form-email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <div class="form-password">
+                        <div class="password-left">
+                            <label for="Password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div class="password-right">
+                            <label for="confirmation">Confirm Password</label>
+                            <input type="password" name="confirmation" id="confirmation">
+                        </div>
+                        <div class="password-check">
+                            <label for="slidebar">Strength</label>
+                            <div class="slidebar" name="slidebar" id="slidebar">---------------------------------</div>
+                        </div>
+                        <div class="password-advice">
+                            <p class="advice strength"><small>•</small>Your password strength is low, we suggest to make it stronger !</p>
+                            <p class="advice has-uppercase"><small>•</small>Contains at least one uppercase letter</p>
+                            <p class="advice has-special"><small>•</small>Contains at least one special character</p>
+                            <p class="advice has-number"><small>•</small>Contains at least one number</p>
+                        </div>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <button><img src="../../images/btn_google_light_normal_ios.svg" alt="Google Logo Button"> Sign Up with Google</button>
+            <button><img src="../../images/github-logo.svg" alt="Github Logo Button">Sign Up with Github</button>
+        </div>
+        <p class="tos-message">Pressing the button above, you agree to our <a href="#" id="tos">Terms of Use</a> and <a href="#" class="privacy">Privacy Policy</a></p>
+    </div>
+</body>
+</html>
