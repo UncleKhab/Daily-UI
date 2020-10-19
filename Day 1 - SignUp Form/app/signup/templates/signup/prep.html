@@ -1,0 +1,59 @@
+<!-- REGISTER -->
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <div class="form-names">
+        <div class="name-left">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name">
+        </div>
+        
+        <div class="name-right">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name">
+        </div>
+    </div>
+
+    <div class="form-email">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+
+    <div class="form-password">
+        <div class="password-left">
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div class="password-right">
+            <label for="confirmation">Confirm Password</label>
+            <input type="password" name="confirmation" id="confirmation">
+            <img src="{% static 'images/Show_password.svg' %}" alt="">
+        </div>
+        <div class="password-check">
+            <label for="slidebar">Strength</label>
+            <div class="slidebar" name="slidebar" id="slidebar">---------------------------------</div>
+        </div>
+        <div class="password-advice">
+            <p class="advice strength"><small>•</small>Your password strength is low, we suggest to make it stronger !</p>
+            <p class="advice has-uppercase"><small>•</small>Contains at least one uppercase letter</p>
+            <p class="advice has-special"><small>•</small>Contains at least one special character</p>
+            <p class="advice has-number"><small>•</small>Contains at least one number</p>
+        </div>
+    </div>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+
+<!-- LOGIN -->
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <button type="submit">Sign In</button>
+</form>

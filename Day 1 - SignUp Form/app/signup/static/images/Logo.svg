@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="202.225" height="59.794" viewBox="0 0 202.225 59.794">
+  <defs>
+    <filter id="Line_1" x="132.896" y="8.53" width="51.119" height="51.265" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.38"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_2" x="142.701" y="0" width="59.524" height="59.794" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.38"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9" data-name="Group 9" transform="translate(-1143 -608.531)">
+    <text id="FormSign" transform="translate(1143 645)" font-size="32" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Form</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700">Sign</tspan></text>
+    <g id="Group_1" data-name="Group 1" transform="translate(1006 577.122)">
+      <rect id="Rectangle_14" data-name="Rectangle 14" width="25" height="25" transform="translate(283 45.878)" fill="#00bfa6"/>
+      <g transform="matrix(1, 0, 0, 1, 137, 31.41)" filter="url(#Line_1)">
+        <line id="Line_1-2" data-name="Line 1" x2="9.805" y2="9.951" transform="translate(150.55 24.19)" fill="none" stroke="#2a2626" stroke-linecap="square" stroke-width="8"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 137, 31.41)" filter="url(#Line_2)">
+        <line id="Line_2-2" data-name="Line 2" x1="18.21" y2="18.481" transform="translate(160.36 15.66)" fill="none" stroke="#2a2626" stroke-linecap="square" stroke-width="8"/>
+      </g>
+    </g>
+  </g>
+</svg>
