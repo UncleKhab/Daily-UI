@@ -28,13 +28,33 @@
                 <div class="form-wrapper">
                     <div class="buttons">
                         <div class="buttons-background">
-                            <button class="btn btn-sign-up active">Sign Up</button>
-                            <button class="btn btn-sign-in">Sign In</button>
+                            
+                            <button class="btn btn-sign-up btn-sign active" data-switch="sign-up">Sign Up</button>
+                            <button class="btn btn-sign-in btn-sign " data-switch="sign-up">Sign In</button>
+                            <div class="btn-slider"></div>
                         </div>
                     </div>
                     <div class="input-wrapper">
                        <!-- THIS IS WHERE THE FORMS GO! -->
-                       <form action="{% url 'register' %}" method="post">
+                       <div class="log-in">
+                        <form action="{% url 'login' %}" method="post">
+                            {% csrf_token %}
+                                <div class="form-email">
+                                    <label for="email">Email</label>
+                                    <input class="big" type="email" name="email" id="lemail">
+                                </div>
+                                <div class="form-password">
+                                    <label for="password">Password</label>
+                                    <input class="mg-bt-m big" type="password" name="password" id="lpassword">
+                                    <img class="eye" src="{% static 'images/Show_password.svg' %}" alt="">
+                                </div>
+                                <button class="btn-social primary" type="submit">Sign In</button>
+                            </form>
+                       </div>
+
+
+                       <div class="register">
+                        <form action="{% url 'register' %}" method="post">
                             {% csrf_token %}
                             <div class="form-names">
                                 <div class="name-left">
@@ -80,6 +100,7 @@
                         
                             <button class="btn-social primary" type="submit">Sign Up</button>
                         </form>
+                       </div>
                        <!-- THIS IS WHERE THE FORMS END! -->
                     </div>
                     <div class="btn-wrap "><button class="btn-social white"><img class="social-logo" id="google-logo" src=" {% static 'images/btn_google_light_normal_ios.svg' %} " alt="Google Logo Button"> <p class="social-text">Sign Up with Google</p></button></div>
@@ -93,7 +114,7 @@
         </div>
     </div>
 
-    
+    <script src="{% static 'app.js' %}"></script>
     
 </body>
 </html>

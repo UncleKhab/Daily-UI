@@ -15,45 +15,50 @@
 
     <div class="form-email">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input class="big" type="email" name="email" id="email">
     </div>
 
     <div class="form-password">
         <div class="password-left">
             <label for="Password">Password</label>
-            <input type="password" name="password" id="password">
+            <input class="big" type="password" name="password" id="password">
+            <img class="eye" src="{% static 'images/Show_password.svg' %}" alt="">
         </div>
         <div class="password-right">
             <label for="confirmation">Confirm Password</label>
-            <input type="password" name="confirmation" id="confirmation">
-            <img src="{% static 'images/Show_password.svg' %}" alt="">
+            <input class="big" type="password" name="confirmation" id="confirmation">
+            
         </div>
         <div class="password-check">
             <label for="slidebar">Strength</label>
-            <div class="slidebar" name="slidebar" id="slidebar">---------------------------------</div>
+            <div class="slidebar" name="slidebar" id="slidebar"></div>
         </div>
         <div class="password-advice">
-            <p class="advice strength"><small>•</small>Your password strength is low, we suggest to make it stronger !</p>
-            <p class="advice has-uppercase"><small>•</small>Contains at least one uppercase letter</p>
-            <p class="advice has-special"><small>•</small>Contains at least one special character</p>
-            <p class="advice has-number"><small>•</small>Contains at least one number</p>
+            <ul>
+                <li class="advice">Your password strength is low, we suggest to make it stronger !</li>
+                <li class="advice">Contains at least one uppercase letter</li>
+                <li class="advice">Contains at least one special character</li>
+                <li class="advice">Contains at least one number</li>
+            </ul>
         </div>
     </div>
 
-    <button type="submit">Sign Up</button>
+    <button class="btn-social primary" type="submit">Sign Up</button>
 </form>
-
+<!-- END REGISTER -->
 
 <!-- LOGIN -->
 <form action="{% url 'login' %}" method="post">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-email">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input class="big" type="email" name="email" id="email">
     </div>
-    <div class="form-group">
+    <div class="form-password">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        <input class="big" type="password" name="password" id="password">
+        <img class="eye" src="{% static 'images/Show_password.svg' %}" alt="">
     </div>
-    <button type="submit">Sign In</button>
+    <button class="btn-social primary" type="submit">Sign Up</button>
 </form>
+<!-- END LOGIN -->

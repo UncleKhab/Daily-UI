@@ -3,7 +3,13 @@ body{
     box-sizing:border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.mg-bt-m{
+    margin-bottom:20px;
+}
 
+.log-in{
+    display:none;
+}
 .hero-header{
     font-family: 'Domine';
     font-size: 48px;
@@ -71,11 +77,15 @@ body{
     text-align:center;
     padding:0 20px;
 }
+
+
 .buttons-background{
     display: inline-block;
     background-color: #ddf1ee;
     padding: 0px 10px;
     border-radius:10px;
+    position:relative;
+    z-index:0;
 }
 
 .btn {
@@ -85,12 +95,31 @@ body{
     font-weight: bold;
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #ddf1ee;
-
+    background-color: transparent;
+    z-index:2;
+}
+.btn:focus{
+    outline:none;
+}
+.btn-slider{
+    background-color: #00bfa6;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top:0;
+    z-index:-1;
+    border-radius:10px;
+    animation-name: slider;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;
+    animation-play-state : paused;
+    
 }
 
 .active {
-    background-color: #00BFA6;
+    background-color: transparent;
     border-radius:10px;
     color:white;
 }
@@ -118,8 +147,8 @@ label {
 .form-names {
     display:flex;
 }
-.name-left {
-    margin-right:10px;
+#first-name{
+    width:92%;
 }
 
 .big {
@@ -173,3 +202,14 @@ ul{
     color:white;
 }
 
+
+
+@keyframes slider {
+    0% {
+        top: 0; 
+        left:10px;
+    }
+    100%{
+        left:120px;
+    }
+}
