@@ -202,6 +202,22 @@ ul{
     color:white;
 }
 
+.register{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:1;
+    animation-play-state : paused;
+    
+}
+
+.log-in{
+    animation-name: fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:1;
+    animation-play-state : paused;
+}
 
 
 @keyframes slider {
@@ -213,3 +229,13 @@ ul{
         left:120px;
     }
 }
+
+@keyframes fade-out {
+    0%{
+        opacity:100%
+    }
+    100%{
+        opacity:0;
+    }
+}
+
