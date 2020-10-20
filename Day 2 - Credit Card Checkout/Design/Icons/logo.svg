@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214" height="37" viewBox="0 0 214 37">
+  <g id="Group_2" data-name="Group 2" transform="translate(-196 -34)">
+    <text id="PayToday" transform="translate(196 63)" fill="#707070" font-size="30" font-family="Montserrat-Regular, Montserrat"><tspan x="0" y="0">Pay</tspan><tspan y="0" font-family="Montserrat-Bold, Montserrat" font-weight="700">Today</tspan></text>
+    <g id="Group_1" data-name="Group 1" transform="translate(72 136.701)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="54" height="30" transform="translate(277 -95.701)" fill="#96a7fc"/>
+      <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(284 -102.701)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="54" height="30" stroke="none"/>
+        <rect x="0.5" y="0.5" width="53" height="29" fill="none"/>
+      </g>
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="54" height="30" transform="translate(284 -102.701)" fill="#5061b2"/>
+      <line id="Line_1" data-name="Line 1" x2="10.898" transform="translate(287.509 -79.311)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="Line_2" data-name="Line 2" x2="10.898" transform="translate(299.963 -79.311)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="Line_3" data-name="Line 3" x2="10.898" transform="translate(312.418 -79.311)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="Line_4" data-name="Line 4" x2="10.898" transform="translate(324.873 -79.311)" fill="none" stroke="#fff" stroke-width="2"/>
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="7" cy="5.5" rx="7" ry="5.5" transform="translate(287 -97.701)" fill="#fff"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="6.5" cy="5.5" rx="6.5" ry="5.5" transform="translate(294 -97.701)" fill="#fff"/>
+      <line id="Line_5" data-name="Line 5" x2="16.347" transform="translate(316.31 -94.879)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="Line_6" data-name="Line 6" x2="9.341" transform="translate(323.316 -89.43)" fill="none" stroke="#fff" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
