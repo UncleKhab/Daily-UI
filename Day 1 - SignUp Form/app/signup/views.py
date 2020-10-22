@@ -64,10 +64,13 @@ def register(request):
             user.save()
             print("success")
         except IntegrityError:
-            return render(request, "network/register.html", {
+            return render(request, "signup/register.html", {
                 "message": "Email Already in use"
             })
-        
+        except ValueError:
+            return render(request, "signup/register.html", {
+                "message" : "Please Input an Email"
+            })
         login(request, user)
         
         return render(request,"signup/register.html", {

@@ -50,6 +50,7 @@ body{
     width:40px;
     position: absolute;
     left: 10px;
+    top: 5px;
 }
 
 #github-logo {
@@ -194,15 +195,24 @@ ul{
     background-color: #00BFA6;
     color:white;
 }
+.primary:hover {
+    background-color: #009a86
+}
 
 .white {
     background-color: #fff;
     color:gray;
 }
+.white:hover {
+    background-color: #d2d2d2;
+}
 
 .dark{
     background-color:black;
     color:white;
+}
+.dark:hover {
+    background-color: #383636;
 }
 
 .register{

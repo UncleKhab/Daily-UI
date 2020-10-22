@@ -6,6 +6,27 @@ specialChars = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 upperCase = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
 slidebar_pointer = d(".slidebar-pointer")
 
+function slidebar_property(left, border, text, color){
+        slidebar_pointer.style.left = left;
+        slidebar_pointer.style.borderTop = border;
+        advice_strength.innerText = text;
+        advice_strength.style.color = color;
+}
+function showpass() {
+    pass = d("#password")
+    conf = d("#confirmation")
+    if(pass.type === "password"){
+        pass.type = "text";
+        conf.type = "text";
+        
+    }
+    else
+    {
+        pass.type = "password";
+        conf.type = "password";
+        
+    }
+}
 function d(selector){
     return document.querySelector(selector);
 }
@@ -97,34 +118,20 @@ d("#password").addEventListener("keyup", function(){
     console.log(strength);
     switch(strength){
         case 1:
-            slidebar_pointer.style.left = '25%'
-            slidebar_pointer.style.borderTop = '10px solid #f27a33';
-            advice_strength.innerText = "Your Password strength is weak, we suggest to make it stronger"
-            advice_strength.style.color = "red"
+            slidebar_property('25%', '10px solid #f27a33', "Your Password strength is weak, we suggest to make it stronger", "red")
             break;
         case 2:
-            slidebar_pointer.style.left = '50%'
-            slidebar_pointer.style.borderTop = '10px solid #d98c00';
-            advice_strength.innerText = "Your Password strength is medium, we suggest to make it stronger"
-            advice_strength.style.color = "#d98c00"
+            slidebar_property('50%', '10px solid #d98c00', "Your Password strength is medium, we suggest to make it stronger", "#d98c00")
             break;
         case 3:
-            slidebar_pointer.style.left = '75%'
-            slidebar_pointer.style.borderTop = '10px solid #7cbe1a';
-            advice_strength.innerText = "Your Password strength is high"
-            advice_strength.style.color = "Green"
+            slidebar_property('75%', '10px solid #7cbe1a', "Your Password strength is high", "Green")
             break;
         case 4:
-            slidebar_pointer.style.left = '97%'
-            slidebar_pointer.style.borderTop = '10px solid #44820b';
-            advice_strength.innerText = "Your Password strength is high"
-            advice_strength.style.color = "Green"
+            slidebar_property('97%', '10px solid #44820b', "Your Password strength is high", "Green")
             break;
         default:
-            slidebar_pointer.style.left = '-2%'
-            slidebar_pointer.style.borderTop = '10px solid #f00';
-            advice_strength.innerText = "Your Password strength is weak, we suggest to make it stronger"
-            advice_strength.style.color = "red"
+            slidebar_property('-2%', '10px solid #f00', "Your Password strength is weak, we suggest to make it stronger", "red")
+         
 
     }
 })
